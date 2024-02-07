@@ -1,14 +1,13 @@
-import "./App.css"
-import { Navbar } from "./Navbar"
-import {Footer} from "./Footer"
+import {Navbar} from "./components/layout/Navbar"
+import { ItemListContainer } from "./components/pages/ItemListContainer"
 
 const App = ()=>{
 
   return (
       <div> 
         <Navbar/>
-        <h1 className="title">La Torcida</h1>
-        <Footer/>
+        <ItemListContainer greeting={"Bienvenidos a Inmobiliaria Moyano"} />
+
       </div>
   )
     
