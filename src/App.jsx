@@ -1,17 +1,15 @@
-import {Navbar} from "./components/layout/Navbar"
-import { ItemListContainer } from "./components/pages/ItemListContainer"
+import ItemCountContainer from "./components/common/ItemCount/ItemCountContainer";
+import { Navbar } from "./components/layout/Navbar";
+import { ItemListContainer } from "./components/pages/ItemListContainer";
 
-const App = ()=>{
-
+const App = () => {
   return (
-      <div> 
-        <Navbar/>
-        <ItemListContainer greeting={"Bienvenidos a Inmobiliaria Moyano"} />
+    <>
+      <Navbar />
+      <ItemListContainer greeting={"Bienvenidos a Inmobiliaria Moyano"} />
+      <ItemCountContainer stock={10} />
+    </>
+  );
+};
 
-      </div>
-  )
-    
-}
-
-export default App
- 
+export default App;
