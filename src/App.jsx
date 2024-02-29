@@ -1,18 +1,15 @@
-import "./App.css"
-import { Navbar } from "./Navbar"
-import {Footer} from "./Footer"
+import ItemCountContainer from "./components/common/ItemCount/ItemCountContainer";
+import { Navbar } from "./components/layout/Navbar";
+import { ItemListContainer } from "./components/pages/ItemList/ItemListContainer";
 
-const App = ()=>{
-
+const App = () => {
   return (
-      <div> 
-        <Navbar/>
-        <h1 className="title">La Torcida</h1>
-        <Footer/>
-      </div>
-  )
-    
-}
+    <>
+      <Navbar />
+      <ItemListContainer />
+      <ItemCountContainer stock={10} />
+    </>
+  );
+};
 
-export default App
- 
+export default App;
