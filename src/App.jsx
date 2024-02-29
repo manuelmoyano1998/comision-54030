@@ -1,12 +1,12 @@
 import ItemCountContainer from "./components/common/ItemCount/ItemCountContainer";
 import { Navbar } from "./components/layout/Navbar";
-import { ItemListContainer } from "./components/pages/ItemListContainer";
+import { ItemListContainer } from "./components/pages/ItemList/ItemListContainer";
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <ItemListContainer greeting={"Bienvenidos a Inmobiliaria Moyano"} />
+      <ItemListContainer />
       <ItemCountContainer stock={10} />
     </>
   );
