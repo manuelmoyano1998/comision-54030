@@ -13,7 +13,7 @@ export let products = [
   {
     id: 1,
     title: "zapatillas vans",
-    price: 50000,
+    price: 40000,
     description: "las mejores",
     image:
       "https://res.cloudinary.com/dfofaipbl/image/upload/v1709840255/s-l1200_c8b46g.webp",
@@ -24,7 +24,7 @@ export let products = [
   {
     id: 2,
     title: "remera Vans",
-    price: 50000,
+    price: 8000,
     description: "las mejores",
     image:
       "https://res.cloudinary.com/dfofaipbl/image/upload/v1709839987/203257553-1-black_exlscp.jpg",

@@ -1,10 +1,10 @@
-import { ProductCard } from "../../common/ProductCard";
+import { ProductCard } from "../../common/ProductCard/ProductCard";
+import "./ItemList.css";
 
 const ItemList = ({ items }) => {
   console.log(items);
   return (
-    <div style={{ backgroundColor: "lightcyan" }}>
-      <h2>Productos</h2>
+    <div className="product-list">
       <div
         style={{
           display: "flex",

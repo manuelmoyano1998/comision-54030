@@ -1,0 +1,14 @@
+.product-list {
+  background-image: url(https://res.cloudinary.com/dfofaipbl/image/upload/v1710437737/pngtree-skateboarder-in-black-and-white-picture-image_2667906_pdhowg.png);
+  background-size: cover;
+}
+
+.product-list h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: antiquewhite;
+}
+
+.product-list h3 {
+  font-family: "Courier New", Courier, monospace;
+  color: antiquewhite;
+}

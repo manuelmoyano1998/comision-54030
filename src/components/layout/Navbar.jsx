@@ -8,7 +8,6 @@ export const Navbar = () => {
         display: "flex",
         justifyContent: "space-evenly",
         alignItems: "center",
-        backgroundColor: "lightblue",
       }}
     >
       <img
