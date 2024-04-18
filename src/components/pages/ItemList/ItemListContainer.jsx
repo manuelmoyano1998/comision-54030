@@ -1,22 +1,21 @@
 import { useEffect, useState } from "react";
-import { products } from "../../../ProductsMock";
+import { getProducts, products } from "../../../ProductsMock";
 import ItemList from "./ItemList";
 
 export const ItemListContainer = () => {
   const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const tarea = new Promise((resolve, reject) => {
-      resolve(products);
-      // reject("Error, algo salio mal")
+    getProducts().then((resp) => {
+      setItems(resp);
+      setIsLoading(false);
     });
-
-    tarea
-      .then((res) => {
-        setItems(res);
-      })
-      .catch((error) => {});
   }, []);
 
-  return <>{items.length > 0 ? <ItemList items={items} /> : <h1>No hay</h1>}</>;
+  return (
+    <>
+      {isLoading ? <h2>Cargando Productos..</h2> : <ItemList items={items} />}
+    </>
+  );
 };

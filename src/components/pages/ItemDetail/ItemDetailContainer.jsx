@@ -1,21 +1,15 @@
 import { useEffect, useState } from "react";
-import { products } from "../../../ProductsMock";
+import { getProduct, products } from "../../../ProductsMock";
+import { ItemDetail } from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
-export const ItemListContainer = () => {
-  const [itemsDet, setItemsDet] = useState([]);
+export const ItemDetailContainer = () => {
+  const { id } = useParams();
+  const [itemsDet, setItemsDet] = useState(null);
 
   useEffect(() => {
-    const tarea = new Promise((resolve, reject) => {
-      resolve(products);
-      // reject("Error, algo salio mal")
-    });
-
-    tarea
-      .then((res) => {
-        setItems(res);
-      })
-      .catch((error) => {});
+    getProduct(id).then((resp) => setItemsDet(resp));
   }, []);
 
-  return <>{items.length > 0 ? <ItemList items={items} /> : <h1>No hay</h1>}</>;
+  return <>{itemsDet && <ItemDetail {...itemsDet} />}</>;
 };

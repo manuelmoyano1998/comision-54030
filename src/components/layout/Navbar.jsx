@@ -1,4 +1,5 @@
 import { CartWidget } from "../common/CartWidget";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
@@ -22,8 +23,11 @@ export const Navbar = () => {
           justifyContent: "space-evenly",
         }}
       >
-        <li>inicio</li>
-        <li>inmuebles</li>
+        <Link to="/">
+          <li>Home</li>
+        </Link>
+        <li>Remeras</li>
+        <li>Zapatillas</li>
         <CartWidget />
       </ul>
     </div>

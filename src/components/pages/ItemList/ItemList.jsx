@@ -11,13 +11,13 @@ const ItemList = ({ items }) => {
           justifyContent: "space-evenly",
         }}
       >
-        {items.map(({ id, image, title, description, price }) => {
+        {items.map(({ id, image, title, price }) => {
           return (
             <ProductCard
               key={id}
+              id={id}
               image={image}
               title={title}
-              description={description}
               price={price}
             />
           );
